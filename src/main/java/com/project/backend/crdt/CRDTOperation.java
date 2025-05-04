@@ -1,9 +1,6 @@
 package com.project.backend.crdt;
 
-enum OperationType {
-    INSERT,
-    DELETE
-}
+
 
 public class CRDTOperation {
     private final OperationType type;

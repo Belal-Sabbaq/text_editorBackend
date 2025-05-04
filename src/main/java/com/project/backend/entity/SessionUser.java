@@ -13,7 +13,11 @@ public class SessionUser {
     @GeneratedValue
     private Long id;
 
-    @ManyToOne
+    @Column(name = "session_id", nullable = false)
+    private Long sessionId;
+
+    @jakarta.persistence.ManyToOne
+    @jakarta.persistence.JoinColumn(name = "session_id", insertable = false, updatable = false)
     private Session session;
 
     @ManyToOne
