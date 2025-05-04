@@ -35,7 +35,6 @@ public class SessionController {
     public ResponseEntity<String> loginToSession(@RequestBody Map<String, String> request) {
         return sessionService.loginToSession(request.get("username"),request.get("accessCode"));
     }
-
     @GetMapping("/{sessionId}/codes")
     public Map<String, String> getSessionCodes(@PathVariable long sessionId, @RequestParam String username) {
         return sessionService.getSessionCodes(sessionId, username);
